@@ -45,7 +45,7 @@ async def group(ctx, specified_num=1):
 @bot.command()
 async def list(ctx, specified_num=2):
     make_list = MakeTeam()
-    msg = make_team.set_mem(self, ctx)
+    msg = make_team.set_mem(ctx)
     await ctx.channel.send(msg)
     
 """botの接続と起動"""
