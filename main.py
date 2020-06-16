@@ -38,13 +38,13 @@ async def team_norem(ctx, specified_num=2):
 @bot.command()
 async def group(ctx, specified_num=1):
     make_team = MakeTeam()
-    msg = make_team.make_specified_len(ctx,specified_num)
+    msg = make_team.make_specified_len(ctx)
     await ctx.channel.send(msg)
     
 # メンバーリスト取得
 @bot.command()
-async def list():
-    make_list = MakeTeam(ctx, specified_num=2)
+async def list(ctx, specified_num=2):
+    make_list = MakeTeam()
     msg = make_team.set_mem(self, ctx)
     await ctx.channel.send(msg)
     
