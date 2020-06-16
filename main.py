@@ -43,9 +43,8 @@ async def group(ctx, specified_num=1):
     
 # メンバーリスト取得
 @bot.command()
-async def list(ctx, specified_num=2):
-    make_list = MakeTeam()
-    msg = make_team.set_mem(ctx)
+async def list():
+    msg = [member.name for member in message.author.voice.channel.members]
     await ctx.channel.send(msg)
     
 """botの接続と起動"""
