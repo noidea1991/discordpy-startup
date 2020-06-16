@@ -44,7 +44,7 @@ async def group(ctx, specified_num=1):
 # メンバーリスト取得
 @bot.command()
 async def list():
-    make_list = MakeTeam()
+    make_list = MakeTeam(ctx, specified_num=2)
     msg = make_team.set_mem(self, ctx)
     await ctx.channel.send(msg)
     
